@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maantrika Studios — Visual storytelling, VFX compositing and original film projects.">
+<title>Maantrika Studios | Visual Storytelling</title>
+<style>
+:root {
+  --bg: #090b12;
+  --panel: #121622;
+  --text: #f4f4f7;
+  --muted: #a6adbd;
+  --gold: #e6bd78;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1120px, 90%); margin: auto; }
+header {
+  padding: 22px 0;
+  border-bottom: 1px solid #252938;
+}
+nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { font-weight: 800; letter-spacing: 2px; }
+.brand span { color: var(--gold); }
+.links { display: flex; gap: 24px; font-size: 14px; color: var(--muted); }
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 75% 35%, #59412c66, transparent 35%),
+    radial-gradient(ellipse at 85% 65%, #313e7166, transparent 38%),
+    linear-gradient(135deg, #111522, #090b12 70%);
+  border-bottom: 1px solid #252938;
+}
+.eyebrow { color: var(--gold); letter-spacing: 4px; font-size: 12px; font-weight: bold; }
+h1 { font-size: clamp(44px, 7vw, 82px); line-height: 1.05; margin: 20px 0; letter-spacing: -3px; }
+h1 span { color: var(--gold); }
+.intro { color: var(--muted); max-width: 620px; font-size: 18px; }
+.btn {
+  display: inline-block; margin: 24px 12px 0 0; padding: 12px 21px;
+  border: 1px solid var(--gold); border-radius: 3px; font-weight: bold;
+}
+.btn.primary { background: var(--gold); color: #17130d; }
+section { padding: 82px 0; }
+.kicker { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; }
+h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.2; margin: 12px 0 20px; }
+.muted { color: var(--muted); max-width: 720px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 35px; }
+.card {
+  background: var(--panel); border: 1px solid #272c3a; padding: 25px;
+  min-height: 180px; border-radius: 5px;
+}
+.card small { color: var(--gold); letter-spacing: 1px; text-transform: uppercase; }
+.card h3 { margin: 12px 0 8px; }
+.card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+.about { background: #0e111b; }
+.contact { background: linear-gradient(120deg, #191b27, #0b0d14); }
+footer { padding: 25px 0; border-top: 1px solid #252938; color: var(--muted); font-size: 13px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .links { gap: 12px; font-size: 12px; }
+  .grid { grid-template-columns: 1fr; }
+  .hero { min-height: 520px; }
+  h1 { letter-spacing: -1.5px; }
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#">MAANTRIKA <span>STUDIOS</span></a>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#about">Studio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">VISUAL STORYTELLING · VFX · FILM</div>
+      <h1>Imagining.<br><span>Creating.</span><br>Bringing stories to life.</h1>
+      <p class="intro">
+        Maantrika Studios is an independent creative venture focused on
+        visual storytelling, visual effects and original cinematic ideas.
+      </p>
+      <a class="btn primary" href="#work">Explore Our Work</a>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="kicker">Our creative world</div>
+      <h2>Stories deserve extraordinary visuals.</h2>
+      <p class="muted">
+        From invisible visual effects to original worlds and characters,
+        we believe every frame should serve the story.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <small>01 / Post-production</small>
+          <h3>VFX & Compositing</h3>
+          <p>CG integration, effects integration, image finishing and cinematic shot development.</p>
+        </article>
+        <article class="card">
+          <small>02 / Development</small>
+          <h3>Original Stories</h3>
+          <p>Developing imaginative film concepts, scripts and worlds with a distinctive creative voice.</p>
+        </article>
+        <article class="card">
+          <small>03 / Visual Design</small>
+          <h3>Creative Exploration</h3>
+          <p>Exploring visual moods, cinematic transitions and the art of bringing ideas to life.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="kicker">About Maantrika</div>
+      <h2>A vision built on imagination.</h2>
+      <p class="muted">
+        Maantrika Studios is a creative venture driven by a passion for
+        cinema, visual effects and meaningful storytelling. Our ambition
+        is to bring original ideas to the screen through craft,
+        collaboration and imagination.
+      </p>
+      <p class="muted">
+        This is the beginning of our online portfolio. More projects,
+        creative work and studio updates will be added as they develop.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="kicker">Let's create together</div>
+      <h2>Have a story in mind?</h2>
+      <p class="muted">
+        We welcome conversations about creative collaborations,
+        visual effects and original film projects.
+      </p>
+      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com?subject=Maantrika%20Studios%20Enquiry">
+        Contact the Studio
+      </a>
+      <p class="muted">Replace the sample email address with your preferred business email before publishing.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Maantrika Studios</span>
+    <span>Independent ideas. Cinematic possibilities.</span>
+  </div>
+</footer>
+</body>
+</html>
