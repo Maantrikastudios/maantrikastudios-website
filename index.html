@@ -1,168 +1,37 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#251052">
-<meta name="description" content="Maantrika Studios — FX to Reality. Visual Effects | Animation | Compositing.">
-<title>Maantrika Studios — FX to Reality</title>
-<style>
-:root{--purple:#351079;--violet:#6b2bd1;--orange:#ff941c;--ink:#150b2e;--cream:#fffaf3}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:inherit;text-decoration:none}.wrap{width:min(1160px,90%);margin:auto}
-header{position:sticky;top:0;z-index:9;background:#fffdf9ef;backdrop-filter:blur(16px);border-bottom:1px solid #ece3f5}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.5px;color:var(--purple);font-size:19px}
-.mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,#8a4fe8,#371079);box-shadow:0 5px 18px #4e218c33;font-size:21px}
-.brand small{display:block;color:var(--orange);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:1px}
-.navlinks{display:flex;gap:28px;font-size:12px;font-weight:750;letter-spacing:1.5px;text-transform:uppercase;color:#4b376d}
-.navlinks a:hover{color:var(--orange)}
-.hero{position:relative;overflow:hidden;min-height:670px;display:grid;align-items:center;background:radial-gradient(ellipse at 78% 30%,#ffe0b1 0%,transparent 32%),radial-gradient(ellipse at 8% 85%,#d5b9ff 0%,transparent 37%),linear-gradient(115deg,#fff 0%,#f6efff 47%,#fff2de 100%)}
-.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(130deg,transparent 0 120px,#fff8 121px 123px,transparent 124px 230px);animation:drift 18s linear infinite}
-.film{position:absolute;right:-80px;top:60px;width:48%;height:180px;border:20px solid #6b2bd119;border-left:0;border-right:0;transform:rotate(-24deg);border-radius:30%;filter:blur(.5px);animation:film 14s ease-in-out infinite alternate}
-.film:before,.film:after{content:"";position:absolute;inset:-12px 0;border-top:5px dashed #5e2ba42c;border-bottom:5px dashed #5e2ba42c}
-.glow{position:absolute;width:360px;height:360px;right:11%;top:23%;border-radius:50%;background:radial-gradient(circle,#ffbd6266,transparent 68%);filter:blur(10px);animation:pulse 6s ease-in-out infinite alternate}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr .92fr;align-items:center;gap:20px;padding:65px 0}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--violet)}
-.eyebrow:before{content:"";width:30px;height:2px;background:var(--orange)}
-h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-4px;margin:24px 0;color:var(--purple)}
-h1 em{display:block;font-family:Georgia,serif;font-weight:400;color:var(--orange);letter-spacing:-2px}
-.lead{font-size:17px;line-height:1.8;color:#55466d;max-width:540px}
-.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:5px;border:1px solid #d8c5f5;font-weight:800;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;transition:transform .25s,box-shadow .25s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px #4e218c20}
-.btn.primary{background:linear-gradient(110deg,#6b2bd1,#351079);color:#fff;border-color:transparent}
-.btn .arrow{color:var(--orange);font-size:17px}
-.logo-frame{position:relative;animation:float 7s ease-in-out infinite}
-.logo-frame img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 30px 80px #4d26722b;mix-blend-mode:multiply}
-.logo-frame:after{content:"";position:absolute;inset:-12px;border:1px solid #7e4cc533;border-radius:24px;pointer-events:none}
-.scrollhint{text-align:center;position:absolute;bottom:20px;left:0;right:0;font-size:10px;letter-spacing:3px;color:#806ba1}
-.scrollhint span{color:var(--orange)}
-section{padding:100px 0}
-.section-top{text-align:center;max-width:740px;margin:0 auto 48px}
-.kicker{color:var(--orange);font-size:11px;font-weight:850;letter-spacing:3px;text-transform:uppercase}
-.section-top h2,.about-copy h2,.contact h2{font-size:clamp(34px,4.5vw,58px);line-height:1.1;letter-spacing:-2px;color:var(--purple);margin:14px 0 18px}
-.section-top h2 em,.about-copy h2 em,.contact h2 em{font-family:Georgia,serif;color:var(--orange);font-weight:400}
-.section-top p,.about-copy p{color:#6b617b;line-height:1.9}
-.services{background:#fff}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{padding:30px;border:1px solid #eee4fa;border-radius:12px;background:linear-gradient(145deg,#fff,#fbf7ff);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.service:hover{transform:translateY(-7px);box-shadow:0 18px 45px #42177812}
-.service:before{content:"";position:absolute;right:-45px;top:-45px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffb84d45,transparent 70%)}
-.service .num{font-size:11px;letter-spacing:2px;color:#9161d0;font-weight:800}
-.service .icon{font-size:34px;margin:24px 0 12px;color:var(--orange)}
-.service h3{font-size:22px;color:var(--purple);margin:0 0 10px}
-.service p{font-size:14px;color:#756b83;line-height:1.8;margin:0}
-.band{background:linear-gradient(110deg,#2c0a69,#5c22b1 52%,#351079);color:#fff;position:relative;overflow:hidden}
-.band:after{content:"FX";position:absolute;right:2%;top:-100px;font-size:360px;font-weight:900;color:#ffffff09;pointer-events:none}
-.band-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}
-.band h2{font-size:clamp(35px,4.5vw,58px);line-height:1.12;margin:14px 0}
-.band h2 em{font-family:Georgia,serif;color:#ffb34e;font-weight:400}
-.band p{color:#e4d7fa;line-height:1.9}
-.pillrow{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
-.pill{border:1px solid #ffffff55;border-radius:30px;padding:8px 13px;font-size:10px;letter-spacing:1px;text-transform:uppercase}
-.about{background:#faf7ff}
-.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
-.about-mark{min-height:300px;border-radius:18px;background:radial-gradient(circle at 50% 40%,#ffb547 0%,#ff9b20 10%,transparent 11%),radial-gradient(circle at 50% 50%,#6d2dcf 0%,#3b117b 50%,#211047 100%);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 25px 60px #36107025}
-.about-mark:before{content:"";position:absolute;width:250px;height:250px;border:1px solid #ffffff4d;border-radius:50%;box-shadow:0 0 0 25px #ffffff0b,0 0 0 50px #ffffff0b;animation:spin 30s linear infinite}
-.about-mark span{position:relative;color:white;font-weight:900;letter-spacing:3px;font-size:22px;text-align:center;text-shadow:0 3px 15px #15052d}
-.about-copy p{font-size:15px}
-.contact{background:linear-gradient(120deg,#fffaf2,#f4eaff);text-align:center}
-.contact-inner{max-width:800px;margin:auto}
-.contact p{color:#665878;line-height:1.9}
-.email{display:inline-block;margin:18px 0;color:var(--purple);font-weight:800;font-size:clamp(16px,2.5vw,24px);border-bottom:2px solid var(--orange);padding-bottom:5px;overflow-wrap:anywhere}
-.contact .buttons{justify-content:center}
-footer{padding:25px 0;background:#1c0b3d;color:#d5c5ed;font-size:11px}
-.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.foot strong{color:#ffad38}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
-.reveal.show{opacity:1;transform:none}
-@keyframes drift{to{background-position:500px 0}}
-@keyframes film{to{transform:translate(-35px,35px) rotate(-20deg)}}
-@keyframes pulse{to{transform:scale(1.14);opacity:.6}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:760px){
-.nav{height:70px}.brand{font-size:15px}.mark{width:34px;height:34px}
-.navlinks{gap:12px;font-size:9px;letter-spacing:.4px}
-.hero-inner{grid-template-columns:1fr;padding:75px 0 55px}
-.hero{min-height:auto}.hero-copy{text-align:center}.eyebrow{justify-content:center}
-h1{letter-spacing:-2px}.lead{font-size:15px;margin-inline:auto}
-.buttons{justify-content:center}.logo-frame{max-width:520px;margin:10px auto 0}
-.scrollhint{display:none}section{padding:72px 0}
-.service-grid{grid-template-columns:1fr}.service{padding:25px}
-.band-inner,.about-grid{grid-template-columns:1fr;gap:30px}
-.about-mark{min-height:240px}.band:after{font-size:200px;top:0}
-}
-@media(prefers-reduced-motion:reduce){
-*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-.reveal{opacity:1;transform:none}
-}
-</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Maantrika Studios creates cinematic worlds through animation, visual effects and original intellectual property.">
+<title>Maantrika Studios — Stories Beyond Reality</title><link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-<nav class="wrap nav">
-<a class="brand" href="#home"><span class="mark">✺</span><span>MAANTRIKA STUDIOS<small>FX TO REALITY</small></span></a>
-<div class="navlinks"><a href="#services">Expertise</a><a href="#about">Studio</a><a href="#contact">Contact</a></div>
-</nav>
+<body class="home">
+<header class="topbar">
+<a class="brand" href="index.html"><img src="assets/logo.svg" alt="Maantrika Studios"></a>
+<nav aria-label="Main navigation"><a class="active" href="index.html">Home</a><a href="studio.html">Studio</a><a class="contact-pill" href="mailto:sanjaykumar@maantrikastudios.com">Contact Us</a></nav>
 </header>
 <main>
-<section class="hero" id="home">
-<div class="film"></div><div class="glow"></div>
-<div class="wrap hero-inner">
+<section class="hero">
+<div class="hero-bg" aria-hidden="true"></div>
 <div class="hero-copy">
-<div class="eyebrow">Visual Effects · Animation · Compositing</div>
-<h1>From imagination <em>FX to Reality.</em></h1>
-<p class="lead">Where creative vision meets cinematic craft. We bring images, ideas and original stories closer to reality — one frame at a time.</p>
-<div class="buttons"><a class="btn primary" href="#services">Explore our world <span class="arrow">↗</span></a><a class="btn" href="#contact">Contact the studio</a></div>
+<p class="eyebrow">ANIMATION <i>•</i> VFX <i>•</i> ORIGINAL IP</p>
+<h1>Stories<br><span>Beyond Reality</span></h1>
+<p class="intro">We create characters, worlds and visual experiences that inspire, entertain and stay with you.</p>
+<a class="showreel" href="mailto:sanjaykumar@maantrikastudios.com?subject=Maantrika%20Studios%20Showreel"><span class="play">▶</span><b>Watch Showreel</b></a>
+<p class="tagline">VISUAL STORYTELLING<br>FOR A BRIGHTER TOMORROW</p>
 </div>
-<div class="logo-frame"><img src="maantrika-logo.png" alt="Maantrika Studios — FX to Reality original studio branding"></div>
-</div>
-<div class="scrollhint">SCROLL TO DISCOVER <span>↓</span></div>
+<div class="hero-art"><img src="assets/adventure-world.png" alt="The brave baby dinosaur girl and her two mouse friends planning an adventure in a fantasy world"></div>
 </section>
-<section class="services" id="services">
-<div class="wrap">
-<div class="section-top reveal"><div class="kicker">Our creative capabilities</div><h2>Ideas made visible.<br><em>Stories made real.</em></h2><p>From invisible effects to imaginative worlds, we bring a thoughtful, detail-driven approach to the moving image.</p></div>
-<div class="service-grid">
-<article class="service reveal"><div class="num">01 / VFX</div><div class="icon">✳</div><h3>Visual Effects</h3><p>Compositing, CG integration, effects integration and cinematic image finishing with an eye for believable detail.</p></article>
-<article class="service reveal"><div class="num">02 / ANIMATION</div><div class="icon">◈</div><h3>Animation</h3><p>Visual development and imaginative storytelling that help characters, moments and worlds connect with audiences.</p></article>
-<article class="service reveal"><div class="num">03 / COMPOSITING</div><div class="icon">⌁</div><h3>Compositing</h3><p>Light, colour, depth and atmosphere brought together to create cohesive, compelling cinematic frames.</p></article>
-</div>
-</div>
+<section class="feature-row">
+<a class="feature" href="studio.html#characters"><img src="assets/dino-character.png" alt="Baby dinosaur heroine"><div class="feature-caption"><span>01</span><div><h2>Characters</h2><p>Memorable characters for timeless stories.</p></div><b>↗</b></div></a>
+<a class="feature feature-middle" href="studio.html#worlds"><img src="assets/mouse-friends.png" alt="Two mouse adventurer friends"><div class="feature-caption"><span>02</span><div><h2>Worlds</h2><p>Imaginative worlds and environments.</p></div><b>↗</b></div></a>
+<a class="feature feature-world" href="studio.html#original-ip"><img src="assets/fantasy-world.png" alt="Fantasy adventure world"><div class="feature-caption"><span>03</span><div><h2>Original IP</h2><p>Distinctive stories and universes.</p></div><b>↗</b></div></a>
 </section>
-<section class="band">
-<div class="wrap band-inner">
-<div class="reveal"><div class="kicker" style="color:#ffb34e">The Maantrika approach</div><h2>Craft in every frame.<br><em>Wonder in every story.</em></h2></div>
-<div class="reveal"><p>We believe the most memorable visuals do more than look impressive — they make you feel something. Maantrika Studios is a creative venture built around that belief, with a passion for visual effects, animation, cinema and original ideas.</p><div class="pillrow"><span class="pill">Visual Effects</span><span class="pill">Animation</span><span class="pill">Compositing</span><span class="pill">Original Stories</span></div></div>
-</div>
-</section>
-<section class="about" id="about">
-<div class="wrap about-grid">
-<div class="about-mark reveal"><span>FX<br>TO REALITY</span></div>
-<div class="about-copy reveal"><div class="kicker">About the studio</div><h2>Every great image begins with <em>a vision.</em></h2><p>Maantrika Studios is an independent creative venture with a love for cinema, visual effects and meaningful storytelling. Our goal is to transform creative ideas into polished visual experiences through craft, curiosity and collaboration.</p><p>As our studio grows, this space will showcase our projects, original concepts and creative collaborations.</p></div>
-</div>
-</section>
-<section class="contact" id="contact">
-<div class="wrap contact-inner reveal">
-<div class="kicker">Let's create something memorable</div><h2>Have a vision?<br><em>Let's make it real.</em></h2>
-<p>For visual effects enquiries, creative collaborations and original projects, contact Maantrika Studios.</p>
-<a class="email" href="mailto:contactus@maantrikastudios.com?subject=Maantrika%20Studios%20Enquiry">contactus@maantrikastudios.com ↗</a>
-<div class="buttons"><a class="btn primary" href="mailto:contactus@maantrikastudios.com?subject=Maantrika%20Studios%20Enquiry">Email the studio</a></div>
-</div>
+<section class="closing">
+<p class="eyebrow">MAANTRIKA STUDIOS PVT LTD</p><h2>Visual storytelling<br><span>for a brighter tomorrow.</span></h2>
+<p>Animation · VFX · Original IP Creation</p><a class="outline-button" href="studio.html">Discover the studio <span>→</span></a>
 </section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 <strong>Maantrika Studios</strong> · FX to Reality</span><span>Visual Effects | Animation | Compositing</span></div></footer>
-<script>
-const revealItems=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}
-}),{threshold:.12});
-revealItems.forEach(el=>observer.observe(el));
-}else{revealItems.forEach(el=>el.classList.add('show'))}
-</script>
-</body>
-</html>
+<footer><span>© <span id="year"></span> Maantrika Studios Pvt Ltd</span><span>Animation · VFX · Original IP Creation</span><a href="mailto:sanjaykumar@maantrikastudios.com">sanjaykumar@maantrikastudios.com</a></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
